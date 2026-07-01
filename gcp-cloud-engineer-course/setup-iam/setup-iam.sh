@@ -26,3 +26,13 @@ foreach ($ROLE in $ROLES) {
     --member="serviceAccount:$SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com" `
     --role="$ROLE"
 }
+
+
+
+
+
+$SERVICE_ACCOUNT='dev-deployer'
+$PROJECT_ID='astral-archive-501113-v0'
+$ROLES='projects/astral-archive-501113-v0/roles/VMIniciarDetener'
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:$SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com" --role="$ROLES"
+
