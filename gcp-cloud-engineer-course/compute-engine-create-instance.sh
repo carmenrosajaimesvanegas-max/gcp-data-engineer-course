@@ -1,4 +1,0 @@
-gcloud compute instances create servidor-web-1 --zone=us-central1-a --machine-type=e2-micro --subnet=subred-us --tags=web-server --metadata-from-file startup-script=./startup-script.sh
-gcloud compute instances add-metadata servidor-web-1 --zone=us-central1-a --metadata-from-file startup-script=../startup-script.sh
-# configurar el firewall de la maquina virtual para permitir el tráfico HTTP (puerto 80) desde cualquier dirección IP
-gcloud compute firewall-rules create allow-http --network mi-vpc-curso --action allow --direction INGRESS --rules tcp:80 --source-ranges 0.0.0.0/0 --target-tags web-server
