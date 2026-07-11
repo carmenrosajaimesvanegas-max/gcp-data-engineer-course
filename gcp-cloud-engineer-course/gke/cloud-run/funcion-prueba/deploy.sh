@@ -1,0 +1,1 @@
+gcloud functions deploy funcion-prueba --gen2 --runtime=python311 --region=us-central1 --source=. --entry-point=hello_http --trigger-http --allow-unauthenticated
